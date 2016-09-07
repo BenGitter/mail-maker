@@ -1,0 +1,30 @@
+{
+  "name": "mail-maker",
+  "version": "1.0.0",
+  "description": "Simple mail maker web app, to send HTML mails",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BenGitter/mail-maker.git"
+  },
+  "author": "Benjamin van Zwienen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BenGitter/mail-maker/issues"
+  },
+  "homepage": "https://github.com/BenGitter/mail-maker#readme",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "express": "^4.14.0",
+    "nodemailer": "^2.6.0"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "child_process": "^1.0.2",
+    "gulp": "^3.9.1"
+  }
+}
