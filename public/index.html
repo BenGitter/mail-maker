@@ -3,8 +3,47 @@
 <head>
   <meta charset="UTF-8">
   <title>Home</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+    }
+    iframe{
+      width: 400px;
+      height: 99%;
+      margin: 0;
+      padding: 0;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome</h1>
+  <iframe id="ifr" src="mail.html" ></iframe>  
+  <input id="naam" type="text" name="name">
+  <input id="title" type="text" name="name">
+  <input id="img-url" type="text" name="name">
+  <button id="submit">Submit</button>
+
+  <script
+			  src="https://code.jquery.com/jquery-3.1.0.min.js"
+			  integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
+			  crossorigin="anonymous"></script>
+  <script>
+    $("#submit").on("click", function(){
+      
+      var name = $("#naam").val();
+      var title = $("#title").val();
+      var imgURL = $("#img-url").val();
+      console.log(val);
+
+      var val = { name: name, title: title, url: imgURL};
+
+      $.getJSON("http://localhost:8080/name/" + encodeURIComponent(JSON.stringify(val)), function(){
+        console.log("data");
+        document.getElementById("ifr").src += "";
+      }); 
+    });
+  </script>
 </body>
 </html>
